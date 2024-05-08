@@ -9,18 +9,23 @@
       <label for="password">Senha</label>
     </FloatLabel>
     
-    <Button label="Submit" />
+    <Button label="Submit" type="submit"/>
   </form>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { defineEmits } from 'vue';
 
 const username = ref('');
 const password = ref('');
 
+const emit = defineEmits<{
+  login: [u: string, p: string];
+}>();
+
 function login() {
-  // Your login logic here
+  emit('login', username.value, password.value);
 }
 </script>
 
