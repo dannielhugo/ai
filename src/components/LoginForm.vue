@@ -1,21 +1,20 @@
 <template>
-  <form @submit.prevent="login" class="login">
+  <form @submit.prevent="submit" class="login" data-testid="loginForm">
     <FloatLabel class="login__float">
-      <InputText id="username" v-model="username" />
+      <InputText id="username" data-testid="username" v-model="username" />
       <label for="username">Usuário</label>
     </FloatLabel>
     <FloatLabel class="login__float">
-      <Password id="password" v-model="password" />
+      <Password inputId="password" data-testid="password" v-model="password" toggleMask/>
       <label for="password">Senha</label>
     </FloatLabel>
     
-    <Button label="Submit" type="submit"/>
+    <Button label="Submit" data-testid="submit" type="submit"/>
   </form>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { defineEmits } from 'vue';
 
 const username = ref('');
 const password = ref('');
@@ -24,8 +23,8 @@ const emit = defineEmits<{
   login: [u: string, p: string];
 }>();
 
-function login() {
-  emit('login', username.value, password.value);
+function submit() {
+  return emit('login', username.value, password.value);
 }
 </script>
 

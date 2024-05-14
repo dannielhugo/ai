@@ -1,12 +1,23 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
+import type { User } from '@/types/user';
 
-export const useUserStore = defineStore('user', () => {
-  const user = ref({});
-  const isLoggedIn = ref(false);
-  function login(username: string, password: string) {
-    isLoggedIn.value = true;
+interface UserState {
+  user: User | null;
+  isLoggedIn: boolean;
+
+}
+
+export const useUserStore = defineStore('user', {
+  state: (): UserState => ({
+    user: null,
+    isLoggedIn: false,
+  }),
+  actions: {
+    login(username: string, password: string) {
+      this.isLoggedIn = true;
+    }
   }
-
-  return { login, user, isLoggedIn };
 });
+
+export type UserStore = ReturnType<typeof useUserStore>;
