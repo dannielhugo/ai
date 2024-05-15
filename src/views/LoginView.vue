@@ -1,6 +1,5 @@
 <template>
   <div class="login-page">
-    <h1>Login</h1>
     <LoginForm @login="loginHandler"/>
   </div>
 </template>
@@ -24,10 +23,4 @@ userStore.$subscribe((_, state) => {
 });
 </script>
 
-<style lang="scss" scoped>
-.login-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-</style>
+<style lang="scss" scoped></style>
