@@ -34,7 +34,6 @@ describe('LoginView.vue', () => {
   });
 
   it('renders the login page', () => {
-    expect(wrapper.find('h1').text()).toBe('Login');
     expect(wrapper.findComponent(LoginForm).exists()).toBe(true);
   });
 

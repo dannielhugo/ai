@@ -4,10 +4,6 @@
 
     <form @submit.prevent="submit" class="login" data-testid="loginForm">
       <v-text-field label="Usuário" data-testid="username" v-model="username"></v-text-field>
-      <FloatLabel class="login__float">
-        <Password inputId="password" data-testid="password" v-model="password" toggleMask />
-        <label for="password">Senha</label>
-      </FloatLabel>
 
       <v-text-field
         :append-inner-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
@@ -16,6 +12,7 @@
         hint="Mínimo 8 caracteres"
         label="Senha"
         data-testid="password"
+        v-model="password"
         @click:append="show = !show"
       ></v-text-field>
 

@@ -5,7 +5,7 @@ import { describe, expect, test } from 'vitest';
 describe('LoginForm.vue', () => {
   test('emits a login event with username and password on form submit', async () => {
     const wrapper = mount(LoginForm);
-    const usernameInput = wrapper.find('[data-testid="username"]');
+    const usernameInput = wrapper.find('[data-testid="username"]').find('input');
     const passwordInput = wrapper.find('[data-testid="password"]').find('input');
     const form = wrapper.find('[data-testid="loginForm"]');
 
@@ -15,8 +15,6 @@ describe('LoginForm.vue', () => {
 
     // Trigger the form submit event
     await form.trigger('submit.prevent');
-
-    console.log(wrapper.emitted());
 
     // Assert that the login event was emitted with the correct username and password
     expect(wrapper.emitted('login')).toEqual([['johndoe', 'password123']]);
