@@ -48,13 +48,13 @@ To start the frontend
 To build the docker images
 
 ```bash
-  docker compose build
+  docker compose up -d --build
 ```
 
 To run the application in Local
 
 ```bash
-  docker compose up
+  docker compose up -d
 ```
 
 ## To Build Docker Image standalone

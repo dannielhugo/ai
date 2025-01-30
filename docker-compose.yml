@@ -10,6 +10,7 @@ services:
       - app_network  # Updated network name for consistency
     ports:
       - "5173:5173"
+      - "8080:8080"
     volumes:
       - ./ai/src:/app/src/
   api:

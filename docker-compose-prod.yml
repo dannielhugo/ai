@@ -1,8 +1,21 @@
 services:
-
+  app:
+    build:
+      context: ./ai
+      dockerfile: Dockerfile-prod
+    container_name: app-container
+    restart: always
+    environment:
+      - VITE_LOGIN_SERVICE=http://localhost:3000/api/auth
+    networks:
+      - app_network  # Updated network name for consistency
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./ai/src:/app/src/
   api:
     build:
-      context: .
+      context: ./ai-api
       dockerfile: Dockerfile-prod
     container_name: api-container  # Simplified container name
     restart: always
@@ -14,7 +27,9 @@ services:
     networks:
       - app_network  # Updated network name for consistency
     volumes:
-      - nodemodules:/src/node_modules
+      - ./ai-api/src:/usr/src/app/src/
+      - ./ai-api/test:/usr/src/app/test/
+      - nodemodules:/ai-api/node_modules
 
   db:
     image: mysql:latest  # MySQL image with the latest tag
