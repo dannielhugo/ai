@@ -1,0 +1,47 @@
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: DOCKERFILE-PROD
+    container_name: api-container  # Simplified container name
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy  # Web waits for DB to be healthy before starting
+    ports:
+      - "3001:3000"  # Map internal port 3000 to host port 3001
+    networks:
+      - app_network  # Updated network name for consistency
+    volumes:
+      - nodemodules:/src/node_modules
+
+  db:
+    image: mysql:latest  # MySQL image with the latest tag
+    restart: always
+    container_name: db-container  # Simplified container name
+    environment:
+      MYSQL_DATABASE: app_db  # Changed to generic DB name for tutorial purposes
+      MYSQL_ROOT_PASSWORD: pass  # Generic password
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - '3306:3306'
+    expose:
+      - "3306"
+    volumes:
+      - db_data:/var/lib/mysql  # Volume for persistent DB storage
+    networks:
+      - app_network  # Updated network name for consistency
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3  # Healthcheck to ensure the DB is ready
+
+volumes:
+  db_data:  # Persistent volume for MySQL data
+  nodemodules: {} #Persistent volume for node_modules folder
+
+networks:
+  app_network:  # Updated network name to make it tutorial-friendly
+    driver: bridge
