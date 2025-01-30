@@ -59,16 +59,16 @@ To run the application in Local
 
 ## To Build Docker Image standalone
 
-To build an image for login service
+To build an image for api
 
 ```bash
-  docker build -t {image name} -f ./services/login-service/DockerFile ./services/login-service
+  docker build -t {image name} -f ./ai-api/DockerFile ./ai-api
 ```
 
 To build an image for Vue js app
 
 ```bash
-  docker build -t {image name} -f ./services/vue-app/DockerFile ./services/vue-app
+  docker build -t {image name} -f ./ai/DockerFile ./ai
 ```
 
 ## Thanks
