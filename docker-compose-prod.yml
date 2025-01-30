@@ -3,7 +3,7 @@ services:
   api:
     build:
       context: .
-      dockerfile: DOCKERFILE-PROD
+      dockerfile: Dockerfile-prod
     container_name: api-container  # Simplified container name
     restart: always
     depends_on:
