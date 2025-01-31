@@ -1,0 +1,89 @@
+{
+  "targetDefaults": {
+    "dev": {
+      "dependsOn": []
+    },
+    "dev:host": {
+      "dependsOn": []
+    },
+    "build": {
+      "cache": true,
+      "dependsOn": [],
+      "outputs": [
+        "{projectRoot}/dist"
+      ]
+    },
+    "preview": {
+      "dependsOn": []
+    },
+    "test:unit": {
+      "cache": true,
+      "dependsOn": [
+        "^test:unit"
+      ]
+    },
+    "test:e2e": {
+      "cache": true,
+      "dependsOn": [
+        "^test:e2e"
+      ]
+    },
+    "test:e2e:dev": {
+      "dependsOn": []
+    },
+    "build-only": {
+      "cache": true,
+      "dependsOn": [],
+      "outputs": [
+        "{projectRoot}/dist"
+      ]
+    },
+    "type-check": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "lint": {
+      "cache": true,
+      "dependsOn": [
+        "^lint"
+      ]
+    },
+    "format": {
+      "dependsOn": []
+    },
+    "start": {
+      "dependsOn": []
+    },
+    "start:dev": {
+      "dependsOn": []
+    },
+    "start:debug": {
+      "dependsOn": []
+    },
+    "start:prod": {
+      "dependsOn": []
+    },
+    "test": {
+      "cache": true,
+      "dependsOn": [
+        "^test"
+      ]
+    },
+    "test:watch": {
+      "dependsOn": []
+    },
+    "test:cov": {
+      "cache": true,
+      "dependsOn": [
+        "^test:cov"
+      ],
+      "outputs": [
+        "{projectRoot}/coverage"
+      ]
+    },
+    "test:debug": {
+      "cache": true,
+      "dependsOn": []
+    }
+  }
+}

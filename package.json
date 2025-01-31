@@ -3,8 +3,12 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "start:login": "npm run start --workspace=ai-api",
-    "start:app": "npm run dev --workspace=ai"
+    "start:api": "yarn run start --workspace=ai-api",
+    "start:app": "yarn run dev --workspace=ai",
+    "build:api": "yarn run build --workspace=api",
+    "build:app": "yarn run build --workspace=ai",
+    "test:api": "yarn run test --workspace=api",
+    "test:app": "yarn run test:unit --workspace=ai"
   },
   "repository": {
     "type": "git",
@@ -21,5 +25,9 @@
     "url": "https://github.com/dannielhugo/ai-monorepo/issues"
   },
   "homepage": "https://github.com/dannielhugo/ai-monorepo#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^8.1.9"
+  }
 }

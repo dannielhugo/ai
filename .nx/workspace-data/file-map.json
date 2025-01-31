@@ -1,0 +1,378 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.4.0",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".github/workflows/nodejs.yml",
+        "hash": "10598156318761402152"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "2261046835125579533"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "11289473934738855970"
+      },
+      {
+        "file": "README.md",
+        "hash": "3523945941300286113"
+      },
+      {
+        "file": "docker-compose-prod.yml",
+        "hash": "10604556055804305852"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "18351001490053304519"
+      },
+      {
+        "file": "lerna.json",
+        "hash": "15385120962621034589"
+      },
+      {
+        "file": "nx.json",
+        "hash": "2790054077982546086"
+      },
+      {
+        "file": "package.json",
+        "hash": "10065941386212208095"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "5692688932609300807"
+      }
+    ],
+    "projectFileMap": {
+      "ai": [
+        {
+          "file": "ai/.dockerignore",
+          "hash": "11091884865853158211"
+        },
+        {
+          "file": "ai/.eslintrc.cjs",
+          "hash": "14819816486384702258"
+        },
+        {
+          "file": "ai/.gitignore",
+          "hash": "13524112160863732742"
+        },
+        {
+          "file": "ai/.prettierrc.json",
+          "hash": "5189364432254385715"
+        },
+        {
+          "file": "ai/Dockerfile",
+          "hash": "13647883934540436321"
+        },
+        {
+          "file": "ai/Dockerfile-prod",
+          "hash": "12468044057025547751"
+        },
+        {
+          "file": "ai/LICENSE",
+          "hash": "13234113588235360076"
+        },
+        {
+          "file": "ai/README.md",
+          "hash": "12542718852084681491"
+        },
+        {
+          "file": "ai/components.d.ts",
+          "hash": "11978711586262684814"
+        },
+        {
+          "file": "ai/cypress.config.ts",
+          "hash": "12800822303995748946"
+        },
+        {
+          "file": "ai/cypress/e2e/example.cy.ts",
+          "hash": "5242603999781104962"
+        },
+        {
+          "file": "ai/cypress/e2e/tsconfig.json",
+          "hash": "12711766073737211014"
+        },
+        {
+          "file": "ai/cypress/fixtures/example.json",
+          "hash": "11785586596216172004"
+        },
+        {
+          "file": "ai/cypress/support/commands.ts",
+          "hash": "226488224616205138"
+        },
+        {
+          "file": "ai/cypress/support/e2e.ts",
+          "hash": "11127209477976297836"
+        },
+        {
+          "file": "ai/env.d.ts",
+          "hash": "12946363841406869089"
+        },
+        {
+          "file": "ai/index.html",
+          "hash": "17190326710390251276"
+        },
+        {
+          "file": "ai/package.json",
+          "hash": "1013036241583479885",
+          "deps": [
+            "npm:@rushstack/eslint-patch",
+            "npm:@tsconfig/node20",
+            "npm:@types/jsdom",
+            "npm:@types/node@20.17.16",
+            "npm:@vitejs/plugin-vue",
+            "npm:@vue/eslint-config-prettier",
+            "npm:@vue/eslint-config-typescript@13.0.0",
+            "npm:@vue/test-utils",
+            "npm:@vue/tsconfig",
+            "npm:cypress",
+            "npm:eslint",
+            "npm:eslint-plugin-cypress",
+            "npm:eslint-plugin-vue",
+            "npm:jsdom",
+            "npm:npm-run-all2",
+            "npm:prettier",
+            "npm:sass",
+            "npm:start-server-and-test",
+            "npm:typescript@5.4.5",
+            "npm:unplugin-vue-components",
+            "npm:vite",
+            "npm:vite-plugin-vue-devtools",
+            "npm:vitest@1.6.0",
+            "npm:vue-tsc@2.2.0",
+            "npm:pinia@2.3.1",
+            "npm:primeicons",
+            "npm:primevue",
+            "npm:vue",
+            "npm:vue-router"
+          ]
+        },
+        {
+          "file": "ai/public/favicon.ico",
+          "hash": "18282137866655320110"
+        },
+        {
+          "file": "ai/src/App.vue",
+          "hash": "6141295294697614613"
+        },
+        {
+          "file": "ai/src/assets/base.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "ai/src/assets/logo.svg",
+          "hash": "9991375553522856255"
+        },
+        {
+          "file": "ai/src/assets/main.scss",
+          "hash": "1970802632404080230"
+        },
+        {
+          "file": "ai/src/components/HelloWorld.vue",
+          "hash": "9284148234732554807"
+        },
+        {
+          "file": "ai/src/components/TheWelcome.vue",
+          "hash": "6668640087899901675"
+        },
+        {
+          "file": "ai/src/components/WelcomeItem.vue",
+          "hash": "12329010385993129720"
+        },
+        {
+          "file": "ai/src/components/__tests__/HelloWorld.spec.ts",
+          "hash": "11102497765425688592"
+        },
+        {
+          "file": "ai/src/components/icons/IconCommunity.vue",
+          "hash": "13677159598623475801"
+        },
+        {
+          "file": "ai/src/components/icons/IconDocumentation.vue",
+          "hash": "18236295658572451706"
+        },
+        {
+          "file": "ai/src/components/icons/IconEcosystem.vue",
+          "hash": "15980754303377160206"
+        },
+        {
+          "file": "ai/src/components/icons/IconSupport.vue",
+          "hash": "15808468652280814992"
+        },
+        {
+          "file": "ai/src/components/icons/IconTooling.vue",
+          "hash": "4609695526839923136"
+        },
+        {
+          "file": "ai/src/main.ts",
+          "hash": "15925583299848532341"
+        },
+        {
+          "file": "ai/src/router/index.ts",
+          "hash": "11217658424698460744"
+        },
+        {
+          "file": "ai/src/stores/counter.ts",
+          "hash": "3590648083828400687"
+        },
+        {
+          "file": "ai/src/views/AboutView.vue",
+          "hash": "322860496764757219"
+        },
+        {
+          "file": "ai/src/views/HomeView.vue",
+          "hash": "3389815044832443565"
+        },
+        {
+          "file": "ai/tsconfig.app.json",
+          "hash": "6391331620796574655"
+        },
+        {
+          "file": "ai/tsconfig.json",
+          "hash": "13157039136019614298"
+        },
+        {
+          "file": "ai/tsconfig.node.json",
+          "hash": "172793107153560902"
+        },
+        {
+          "file": "ai/tsconfig.vitest.json",
+          "hash": "9003281969263017661"
+        },
+        {
+          "file": "ai/vite.config.ts",
+          "hash": "15818228729981817523"
+        },
+        {
+          "file": "ai/vitest.config.ts",
+          "hash": "7230602823731984274"
+        },
+        {
+          "file": "ai/yarn.lock",
+          "hash": "7739875670879785156"
+        }
+      ],
+      "ai-api": [
+        {
+          "file": "ai-api/.dockerignore",
+          "hash": "4872830721202877156"
+        },
+        {
+          "file": "ai-api/.gitignore",
+          "hash": "12634402967133909834"
+        },
+        {
+          "file": "ai-api/.prettierrc",
+          "hash": "4808572120966128913"
+        },
+        {
+          "file": "ai-api/Dockerfile",
+          "hash": "11399798341869321706"
+        },
+        {
+          "file": "ai-api/Dockerfile-prod",
+          "hash": "5627145036112811280"
+        },
+        {
+          "file": "ai-api/README.md",
+          "hash": "1820903946752272977"
+        },
+        {
+          "file": "ai-api/eslint.config.mjs",
+          "hash": "13183347058815926503"
+        },
+        {
+          "file": "ai-api/nest-cli.json",
+          "hash": "789240945379598733"
+        },
+        {
+          "file": "ai-api/package.json",
+          "hash": "7193062638492630827",
+          "deps": [
+            "npm:@eslint/eslintrc",
+            "npm:@eslint/js",
+            "npm:@nestjs/cli",
+            "npm:@nestjs/schematics",
+            "npm:@nestjs/testing",
+            "npm:@swc/cli",
+            "npm:@swc/core",
+            "npm:@types/express",
+            "npm:@types/jest",
+            "npm:@types/node",
+            "npm:@types/supertest",
+            "npm:eslint@9.19.0",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-prettier",
+            "npm:globals@15.14.0",
+            "npm:jest",
+            "npm:prettier",
+            "npm:source-map-support",
+            "npm:supertest",
+            "npm:ts-jest",
+            "npm:ts-loader",
+            "npm:ts-node",
+            "npm:tsconfig-paths",
+            "npm:typescript",
+            "npm:typescript-eslint@8.22.0",
+            "npm:@nestjs/common",
+            "npm:@nestjs/core",
+            "npm:@nestjs/platform-express",
+            "npm:@nestjs/typeorm",
+            "npm:mysql2",
+            "npm:reflect-metadata",
+            "npm:rxjs",
+            "npm:typeorm"
+          ]
+        },
+        {
+          "file": "ai-api/src/app.controller.spec.ts",
+          "hash": "2727664763654384995"
+        },
+        {
+          "file": "ai-api/src/app.controller.ts",
+          "hash": "4552329938751326480"
+        },
+        {
+          "file": "ai-api/src/app.module.ts",
+          "hash": "7658168926816482872"
+        },
+        {
+          "file": "ai-api/src/app.service.ts",
+          "hash": "16892833931858030153"
+        },
+        {
+          "file": "ai-api/src/database/database.module.ts",
+          "hash": "16898636353289540088"
+        },
+        {
+          "file": "ai-api/src/main.ts",
+          "hash": "6783086878492621953"
+        },
+        {
+          "file": "ai-api/test/app.e2e-spec.ts",
+          "hash": "7164584812487523395"
+        },
+        {
+          "file": "ai-api/test/jest-e2e.json",
+          "hash": "7570273541430074424"
+        },
+        {
+          "file": "ai-api/tsconfig.build.json",
+          "hash": "276845246908739715"
+        },
+        {
+          "file": "ai-api/tsconfig.json",
+          "hash": "7585820297323587102"
+        },
+        {
+          "file": "ai-api/yarn.lock",
+          "hash": "10232103156962769451"
+        }
+      ]
+    }
+  }
+}
