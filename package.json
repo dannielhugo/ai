@@ -2,14 +2,6 @@
   "name": "ai-monorepo",
   "version": "0.0.1",
   "main": "index.js",
-  "scripts": {
-    "start:api": "yarn run start --workspace=ai-api",
-    "start:app": "yarn run dev --workspace=ai",
-    "build:api": "yarn run build --workspace=api",
-    "build:app": "yarn run build --workspace=ai",
-    "test:api": "yarn run test --workspace=api",
-    "test:app": "yarn run test:unit --workspace=ai"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dannielhugo/ai-monorepo.git"
