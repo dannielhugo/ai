@@ -13,21 +13,21 @@ const loginCallback = async (response: any) => {
 };
 
 const initSignIn = () => {
-  google.accounts.id.initialize({
+  window.google.accounts.id.initialize({
     client_id: "739951848410-ukgk730iphfjho6dsgece8l0a2ia555d.apps.googleusercontent.com",
     callback: loginCallback
   });
 
-  google.accounts.id.renderButton(
+  window.google.accounts.id.renderButton(
     document.getElementById("gSignInButton"),
     { type: "standard", text: "sign_in_with", theme: "outline",
       size: "large", width: "400" }
   );
-  google.accounts.id.prompt();
+  window.google.accounts.id.prompt();
 };
 
 onMounted(() => {
-  if (typeof google !== 'undefined') {
+  if (typeof window.google !== 'undefined') {
     initSignIn();
   }
 });
